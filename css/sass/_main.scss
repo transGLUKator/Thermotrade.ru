@@ -132,7 +132,20 @@ a:active {
 	color: $lightblue;
 }
 
-.top-toolbar nav {
+.top-toolbar-wrapper {
+	
+	background: $darkblue;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: $toplayer;
+	
+	.top-toolbar {
+		width: 1040px;
+		margin: 0 auto;
+	}
+		
+	nav {
 	font-family: $corbel;
 	
 	ul {
@@ -193,10 +206,13 @@ a:active {
 	}
 	
 }
+}
+
 
 .container {
 	width: 1040px;
 	margin: 0 auto;
+	padding-top: 50px;
 }
 
 .top-toolbar {
@@ -206,7 +222,7 @@ a:active {
 	figure{
 		float: right;
 		padding-right: 20px;
-		width: 309px;
+		width: 315px;
 		line-height: 50px;
 		
 		img {
@@ -436,6 +452,7 @@ a:active {
 		width: 235px;
 		height: 290px;
 		position: relative;
+		border: 1px solid $lightblue;
 		
 		.zoom-overlay {
 			background-color: black;
@@ -476,7 +493,7 @@ a:active {
 			font-size: 1.14285em;
 			line-height: 1.5714em;
 			position: absolute;
-			top: 0;
+			bottom: 0;
 			left: 0;
 			text-align: center;
 			
@@ -495,17 +512,12 @@ a:active {
 	
 	img {
 		position: absolute;
-		bottom: 0;
+		top: 0;
 		right: 0;
-	}
-	
-	figure:last-child {
-		border: 1px solid $lightblue;
 	}
 	
 	figure:first-child {
 		margin-right: 20px;
-		border: 1px solid $lightestgrey;
 	}
 
 }
@@ -770,6 +782,11 @@ button {
 			text-align: center;
 		}
 	}
+}
+
+img.to-bottom {
+	top: initial;
+	bottom: 0;
 }
 
 

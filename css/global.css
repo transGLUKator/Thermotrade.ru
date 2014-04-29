@@ -595,49 +595,59 @@ a:visited {
 a:active {
   color: #378cc4; }
 
-.top-toolbar nav {
-  font-family: corbelregular, Helvetica, sans-serif; }
-  .top-toolbar nav ul {
-    float: left; }
-  .top-toolbar nav li {
-    float: left;
-    line-height: 50px;
-    padding: 0 10px;
-    position: relative; }
-    .top-toolbar nav li ul {
-      background: #378cc4;
-      position: absolute;
-      display: none; }
-      .top-toolbar nav li ul a {
-        color: white;
-        height: 25px;
-        line-height: 25px;
-        text-decoration: underline;
-        text-transform: none; }
-      .top-toolbar nav li ul a:hover {
-        text-decoration: none;
+.top-toolbar-wrapper {
+  background: #3b5f93;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 8000; }
+  .top-toolbar-wrapper .top-toolbar {
+    width: 1040px;
+    margin: 0 auto; }
+  .top-toolbar-wrapper nav {
+    font-family: corbelregular, Helvetica, sans-serif; }
+    .top-toolbar-wrapper nav ul {
+      float: left; }
+    .top-toolbar-wrapper nav li {
+      float: left;
+      line-height: 50px;
+      padding: 0 10px;
+      position: relative; }
+      .top-toolbar-wrapper nav li ul {
+        background: #378cc4;
+        position: absolute;
+        display: none; }
+        .top-toolbar-wrapper nav li ul a {
+          color: white;
+          height: 25px;
+          line-height: 25px;
+          text-decoration: underline;
+          text-transform: none; }
+        .top-toolbar-wrapper nav li ul a:hover {
+          text-decoration: none;
+          border-top: none; }
+    .top-toolbar-wrapper nav a {
+      color: white;
+      display: block;
+      height: 50px;
+      text-decoration: none;
+      text-transform: uppercase;
+      -webkit-transition: border-top 0.2s;
+      -moz-transition: border-top 0.2s;
+      transition: border-top 0.2s; }
+    .top-toolbar-wrapper nav a:hover {
+      border-top: 4px solid #378cc4; }
+    .top-toolbar-wrapper nav li.active {
+      background: white; }
+      .top-toolbar-wrapper nav li.active a {
+        color: #242424; }
+      .top-toolbar-wrapper nav li.active a:hover {
         border-top: none; }
-  .top-toolbar nav a {
-    color: white;
-    display: block;
-    height: 50px;
-    text-decoration: none;
-    text-transform: uppercase;
-    -webkit-transition: border-top 0.2s;
-    -moz-transition: border-top 0.2s;
-    transition: border-top 0.2s; }
-  .top-toolbar nav a:hover {
-    border-top: 4px solid #378cc4; }
-  .top-toolbar nav li.active {
-    background: white; }
-    .top-toolbar nav li.active a {
-      color: #242424; }
-    .top-toolbar nav li.active a:hover {
-      border-top: none; }
 
 .container {
   width: 1040px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-top: 50px; }
 
 .top-toolbar {
   background: #3b5f93;
@@ -645,7 +655,7 @@ a:active {
   .top-toolbar figure {
     float: right;
     padding-right: 20px;
-    width: 309px;
+    width: 315px;
     line-height: 50px; }
     .top-toolbar figure img {
       float: left;
@@ -793,7 +803,8 @@ a:active {
   float: left;
   width: 235px;
   height: 290px;
-  position: relative; }
+  position: relative;
+  border: 1px solid #378cc4; }
   .certificates figure .zoom-overlay {
     background-color: black;
     opacity: 0;
@@ -824,7 +835,7 @@ a:active {
     font-size: 1.14285em;
     line-height: 1.5714em;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     text-align: center; }
     .certificates figure figcaption a {
@@ -836,13 +847,10 @@ a:active {
       text-decoration: underline; }
 .certificates img {
   position: absolute;
-  bottom: 0;
+  top: 0;
   right: 0; }
-.certificates figure:last-child {
-  border: 1px solid #378cc4; }
 .certificates figure:first-child {
-  margin-right: 20px;
-  border: 1px solid #e6ecf1; }
+  margin-right: 20px; }
 
 .news article {
   margin-bottom: 25px; }
@@ -1010,6 +1018,10 @@ button {
     font-family: globersemibold, Helvetica, sans-serif;
     font-size: 1.2em;
     text-align: center; }
+
+img.to-bottom {
+  top: initial;
+  bottom: 0; }
 
 /* ==========================================================================
    Helper classes

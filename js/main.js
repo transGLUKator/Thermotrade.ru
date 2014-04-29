@@ -2,11 +2,11 @@ $(document).ready(function(){
 
 	/*Выпадающее меню*/
 	$('nav li').on('mouseenter', function(){
-		$(this).children('ul').slideDown('fast');
+		$(this).find('ul').slideDown('fast');
 	})
 	
 	$('nav li').on('mouseleave', function(){
-		$(this).children('ul').slideUp('fast');
+		$(this).find('ul').slideUp('fast');
 	})
 	
 	/*Fancybox*/
